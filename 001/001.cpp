@@ -3,22 +3,27 @@
 #include <iostream>
 using namespace std;
 
-int main()
-{
-    int n;
+int factorial(int n) {
+    if (n == 0) 
+        return 1;
+    else
+        return n * factorial(n - 1); 
+}
 
-    cout << "輸入一個正整數:";
+int main() {
+    int n;
+    cout << "請輸入一個正整數 n: ";
     cin >> n;
 
-    int result = 1;
-
-    for (int i = 1; i <= n; i++) {
-
-        result *= i;
+    if (n < 0) {
+        cout << "輸入的數字必須為正整數。" << endl;
     }
-    
-    cout << n << "! = "  << result;
+    else {
+        cout << n << "! = " << factorial(n) << endl;
+    }
 
+    return 0;
 }
+
 
 
