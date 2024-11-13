@@ -12,10 +12,13 @@ int main()
     int sum = 0;
     int i = 0;
 
-    while (i <= n) {
+    do  {
+
         sum += i;
         i += 2;
-    }
+
+    } while (i <= n);
+
     cout << "偶數總和為:" << sum;
 }
 
